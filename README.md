@@ -1,2 +1,1 @@
-# 1.Day-WeatherForecast_CodingChallenge
- Simple Weather App
+# 100 Days Web Coding Challenge
