@@ -1,0 +1,148 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing:border-box;
+}
+
+body{
+    background-color: #009dff;
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    background-color: #fff;
+    width: 400px;
+    border-radius: 12px;
+}
+
+.container h2{
+    font-size: 28px;
+    padding: 15px 20px;
+    border-bottom: 1px solid gray;
+}
+.wrapper{
+    margin: 25px;
+}
+.wrapper .input-box{
+    position: relative;
+}
+
+.input-box{
+    display: flex;
+    align-items: center;
+}
+
+.input-box input{
+    width: 100%;
+    height: 50px;
+    font-size: 16px;
+    padding-left: 10px;
+}
+
+.copy-box{
+    position: absolute;
+    right: 15px;
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    background-image: url('https://png.pngtree.com/png-clipart/20190619/original/pngtree-vector-copy-icon-png-image_4013560.jpg');
+    background-size: contain;
+}
+.check{
+    background-image: url('https://cdn-icons-png.flaticon.com/512/5290/5290982.png');
+}
+
+.wrapper .pass-indicator{
+    width: 100%;
+    height: 5px;
+    background-color: #dfdfdf;
+    margin-top: 7px;
+    border-radius: 18px;
+    position: relative;
+}
+
+.pass-indicator::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    border-radius: inherit;
+    transition: all 0.3s ease-in;
+}
+
+#weak::before{
+    width: 25%;
+    background-color: red;
+}
+#medium::before{
+    width: 50%;
+    background-color: yellow;
+}
+#strong::before{
+    width: 100%;
+    background-color: green;
+}
+
+.wrapper .pass-length{
+    margin: 25px 0px 10px 0;
+}
+
+.pass-length .details{
+    display: flex;
+    justify-content: space-between;
+}
+
+.pass-length input{
+    width: 100%;
+    height: 5px;
+}
+
+.pass-settings .options{
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.option{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    width: calc(100%/2);
+}
+
+.option label{
+    cursor: pointer;
+    padding-left: 7px;
+}
+.option input{
+    cursor: pointer;
+    height: 18px;
+    width: 18px;
+}
+
+.option:first-child{
+    pointer-events: none;
+}
+.option input{
+    opacity: 0.7;
+}
+
+.generate{
+    width: 100%;
+    background-color: #009dff;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 14px;
+    padding: 10px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+}
+
+.generate:hover{
+    background-color: lightseagreen;
+}
