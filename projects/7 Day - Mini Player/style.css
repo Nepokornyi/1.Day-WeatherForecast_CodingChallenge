@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+:root{
+    --index: calc(1vw + 1vh);
+}
+
+.video{
+    display: none;
+}
+
+video{
+    width: 100%;
+    object-fit: cover;
+}
+    .popUp{
+        display:initial;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        width: 300px;
+        object-fit: cover;
+    }
+
+.content{
+    text-align: center;
+}
+
+.content h1{
+    margin-top: 25px;
+}
+
+.text{
+    margin: 25px 5px;
+    border-bottom: 1px solid rgb(200, 200, 200);
+    font-size: calc(var(--index) * 1.5);
+    letter-spacing: 1px;
+}
+.text p, ul{
+    padding-bottom: 10px;
+}
