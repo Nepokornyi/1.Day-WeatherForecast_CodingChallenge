@@ -1,0 +1,99 @@
+@media screen and (max-width: 1375px){
+    .hero .mid .desc{ padding-left: 50px; }
+
+    .hero .connect { right: 2.5%; }
+}
+
+@media screen and (max-width: 1200px){
+    .hero .mid .desc h1 { font-size: 2.2em; }
+
+    .hero .mid .desc h1 span { font-size: 1.1em; }
+}
+
+@media screen and (max-width: 900px){
+    .hero .mid { padding-top: 30vh; }
+    
+    .hero .mid .desc { padding-left: 60px; }
+}
+
+@media screen and (max-width: 750px){
+    .hero .mid {padding-top: 35vh;}
+
+    .hero .mid .desc {
+        width: 100%;
+        padding-left: 80px;
+    }
+
+    .hero .mid .placeholder { display: none; }
+
+    .hamb { display: block; }
+    
+    header nav{
+        width: 100%;
+        height: 100vh;
+        background-color: #353f48;
+    
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 100%;
+        justify-content: center;
+
+        transition: 0.3s left;
+    }
+
+    header nav.click{
+        left: 0;
+    }
+
+    header nav ul{ 
+        width: 100%;
+        text-align: center;
+    }
+
+    header nav ul li { display: block; }
+
+    header nav ul li a{
+        font-size: 3em;
+        margin-top: 25px;
+        padding: 0;
+        border-bottom: none;
+    }
+
+    header nav ul li a:hover{
+        border-bottom: none;
+        color: #ededed;
+    }
+
+    header nav .cta{
+        width: 100%;
+        margin-left: 0px;
+        text-align: center;
+    }
+
+    header nav .cta button { margin: 10px 20px }
+
+    .btn{
+        border: 3px;
+        padding: 10px 25px;
+        font-size: 1.1em;
+        letter-spacing: 1.1px;
+        color: tomato;
+    }
+
+    .btn:hover{
+        border: 3px solid #ededed;
+        color: #ededed;
+    }
+
+    .btn-full{
+        border:3px;
+        color: #ededed;
+    }
+
+    .btn-full:hover{
+        border: 3px solid tomato;
+        color: tomato;
+    }
+}

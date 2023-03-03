@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+
+::selection{
+    background: #353f48;
+    color: tomato;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    color: #353f48;
+    overflow-x: hidden;
+    position: relative;
+}
+
+a{
+    display: inline-block;
+    text-decoration: none;
+    color: tomato;
+}
+
+img{
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+}
+
+.container{
+    width: 1280px;
+    max-width: 95%;
+    margin:0 auto;
+}
+
+.btn{
+    display: inline-block;
+    outline: none;
+    border: 2px solid tomato;
+    border-radius: 50px;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: transparent;
+    font-weight: 600;
+    color: tomato;
+}
+
+.btn:hover{
+    border: 2px solid #353f48;
+    color: #353f48;
+}
+
+.btn-full{
+    border: 2px solid tomato;
+    background-color: tomato;
+    color: #ededed;
+}
+
+.btn-full:hover{
+    border: 2px solid tomato;
+    background-color: transparent;
+    color: tomato;
+}
+
+
+header{
+    width: 100%;
+    height: auto;
+    padding: 50px 0 30px 0;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 5;
+}
+
+header .container{
+    width: 1600px;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo h2{
+    font-size: 1.8em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    -webkit-text-stroke: 1px #353f48;
+    color: tomato;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+header .logo h2:hover{
+    -webkit-text-stroke: 1px tomato;
+    color:#353f48;
+}
+
+
+header nav{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+header nav ul { list-style: none; }
+header nav ul li{ display: inline-block; }
+
+header nav ul li a{
+    font-size: 0.9em;
+    font-weight: 600;
+    margin: 0 15px;
+    border-bottom: 2px solid transparent;
+
+    transition-duration: 0.3s;
+    transition-property: color, border-bottom;
+}
+header nav ul li a:hover{
+    border-bottom: 2px solid #353f48;
+    color: #353f48;
+}
+
+header nav .cta{ margin-left: 30px; }
+header nav .cta button:last-child{ margin-left: 20px; }
+
+
+
+.hero {
+    width: 100%;
+    height: 100vh;
+    background-color: #ededed;
+    position: relative;
+    z-index: 1;
+}
+
+.hero .mid{
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding-top: 20vh;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+
+    position: relative;
+    z-index: 1;
+}
+
+.hero .mid .desc { width: 50% }
+
+.hero .mid .desc h1{
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+.hero .mid .desc h1 span{
+    font-size: 1.25em;
+    -webkit-text-stroke: 1px tomato;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero .mid .desc p{
+    width: 550px;
+    max-width: 100%;
+    margin-bottom: 50px;
+}
+
+.hero .mid .placeholder { width: 50% }
+
+.hero .over{
+    width: 40px;
+    height: auto;
+
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    z-index: 4;
+}
+
+.hero .over a{
+    display: block;
+    text-align: center;
+    margin: 30px 0;
+}
+
+.hero .over a i{
+    font-size: 1.5em;
+    color: #353f48;
+
+    transition: 0.3s color;
+}
+
+.hero .over a:hover i{ color: tomato; }
+
+.hero .connect{
+    position: absolute;
+    right: 8%;
+    bottom: 50px;
+}
+
+.hero .connect a{
+    font-size: 0.9em;
+    font-weight: 600;
+    margin-left: 30px;
+}
+
+.hero .connect a:hover { text-decoration: underline;}
+
+.hamb{
+    width: 30px;
+    height: auto;
+    cursor: pointer;
+    display: none;
+
+    position: absolute;
+    top: 60px;
+    right: 25px;
+    z-index: 6;
+}
+
+.hamb span{
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: tomato;
+}
+
+.hamb span.mid{
+    margin: 7px 0;
+}
