@@ -1,6 +1,7 @@
 import * as THREE from 'three'
 import Experience from "../Experience";
 import GSAP from 'gsap'
+import {RectAreaLightHelper} from 'three/examples/jsm/helpers/RectAreaLightHelper'
 
 
 export default class Room{
@@ -52,7 +53,38 @@ export default class Room{
                     map: this.resources.items.screen,
                 })
             }
+
+            if(child.name === 'Mini_Floor'){
+                child.position.x = -0.3;
+                child.position.z = 8.8;
+            }
+            if(
+                child.name === 'Mailbox' ||
+                child.name === 'Lamp' ||
+                child.name === 'FloorFirst' ||
+                child.name === 'FloorSecond' ||
+                child.name === 'FloorThird' ||
+                child.name === 'Dirt' ||
+                child.name === 'Flower1' ||
+                child.name === 'Flower2'
+            ){
+                child.scale.set(0, 0, 0);
+            }
         })
+
+        const width = 0.8;
+        const height = 0.3;
+        const intensity = 1;
+        const rectLight = new THREE.RectAreaLight(
+            0xffffff,
+            intensity,
+            width,
+            height
+        );
+        rectLight.position.set(7.6, 7, 0.5);
+        rectLight.rotation.x = -Math.PI / 2;
+        rectLight.rotation.z = -Math.PI / 4;
+        this.actualRoom.add(rectLight);
 
         this.actualRoom.scale.set(0.1, 0.1, 0.1);
         this.scene.add(this.actualRoom);
