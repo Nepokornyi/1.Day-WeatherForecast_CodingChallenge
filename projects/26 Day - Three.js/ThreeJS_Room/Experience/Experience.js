@@ -10,6 +10,7 @@ import Theme from './Theme';
 import Renderer from './Renderer';
 import Preloader from './Preloader';
 import World from './World/World';
+import Controls from "./World/Controls.js";
 
 
 export default class Experience{
@@ -31,6 +32,10 @@ export default class Experience{
         this.world = new World();
         this.preloader = new Preloader();
 
+        this.preloader.on('enableControls', () => {
+            this.controls = new Controls();
+        })
+
         this.sizes.on('resize', () => {
             this.resize();
         });
@@ -47,8 +52,12 @@ export default class Experience{
     }
 
     update(){
+        this.preloader.update();
         this.camera.update();
         this.world.update();
         this.renderer.update();
+        if(this.controls){
+            this.controls.update();
+        }
     }
 }

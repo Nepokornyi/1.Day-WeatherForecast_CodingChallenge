@@ -25,7 +25,12 @@ export default class Room{
 
         GSAP.registerPlugin(ScrollTrigger);
 
-        this.setSmoothScroll();
+        document.querySelector(".page").style.overflow = "visible";
+
+        if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+            this.setSmoothScroll();
+        }
+
         this.setScrollTrigger();
     }
 
@@ -115,9 +120,9 @@ export default class Room{
                     }
                 }, 'same');
                 this.secondMoveTimeline.to(this.room.scale, {
-                    x: 0.4,
-                    y: 0.4,
-                    z: 0.4,
+                    x: 0.3,
+                    y: 0.3,
+                    z: 0.3,
                 }, 'same');
                 this.secondMoveTimeline.to(this.rectLight, {
                     width: 0.8 * 4,
@@ -145,6 +150,7 @@ export default class Room{
                 // Resets
                 this.room.scale.set(0.07, 0.07, 0.07);
                 this.room.position.set(0, 0, 0);
+                this.camera.orthographicCamera.position.z = 11.25;
                 this.rectLight.width = 0.3;
                 this.rectLight.height = 0.3;
 
@@ -273,7 +279,6 @@ export default class Room{
                         start: 'top top',
                         end: 'bottom bottom',
                         scrub: 0.5,
-                        invalidateOnRefresh: true,
                     },
                 });
 
@@ -289,7 +294,6 @@ export default class Room{
                         start: 'top top',
                         end: 'bottom bottom',
                         scrub: 0.5,
-                        invalidateOnRefresh: true,
                     },
                 });
 
@@ -308,7 +312,6 @@ export default class Room{
                         start: 'top top',
                         end: 'bottom bottom',
                         scrub: 0.5,
-                        invalidateOnRefresh: true,
                     },
                 });
 
@@ -318,14 +321,11 @@ export default class Room{
                     z: 3,
                 })
 
-
-
-
                 // Platform Animation
                 this.secondPartTimeline = new GSAP.timeline({
                     scrollTrigger: {
                         trigger: '.third-move',
-                        start: 'top top',
+                        start: 'center center',
                     },
                 });
 

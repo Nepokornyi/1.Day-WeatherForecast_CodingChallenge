@@ -7,7 +7,7 @@ export default function (element) {
             if (char === " ") {
                 return `<span>&nbsp;</span>`;
             }
-            return `<span class="animatedis">${char}</span>`;
+            return `<span class="animateThis">${char}</span>`;
         })
         .join("");
 

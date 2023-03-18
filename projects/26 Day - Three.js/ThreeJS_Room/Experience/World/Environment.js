@@ -6,7 +6,6 @@ export default class Environment {
     constructor(){
         this.experience = new Experience();
         this.scene = this.experience.scene;
-        this.resources = this.experience.resources;
 
         this.obj = {
             colorObj: {r:0, g:0, b:0},
@@ -70,5 +69,9 @@ export default class Environment {
             })
         }
     }
+
+    resize() {}
+
+    update() {}
 
 }
