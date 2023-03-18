@@ -1,7 +1,7 @@
 import * as THREE from 'three'
 import Experience from "../Experience";
 import GSAP from 'gsap'
-import {RectAreaLightHelper} from 'three/examples/jsm/helpers/RectAreaLightHelper'
+
 
 
 export default class Room{
@@ -12,6 +12,7 @@ export default class Room{
         this.time = this.experience.time;
         this.room = this.resources.items.room;
         this.actualRoom = this.room.scene
+        this.roomChildren = {};
 
         this.lerp = {
             current: 0,
@@ -58,19 +59,16 @@ export default class Room{
                 child.position.x = -0.3;
                 child.position.z = 8.8;
             }
-            if(
-                child.name === 'Mailbox' ||
-                child.name === 'Lamp' ||
-                child.name === 'FloorFirst' ||
-                child.name === 'FloorSecond' ||
-                child.name === 'FloorThird' ||
-                child.name === 'Dirt' ||
-                child.name === 'Flower1' ||
-                child.name === 'Flower2'
-            ){
-                child.scale.set(0, 0, 0);
+
+            child.scale.set(0, 0, 0);
+
+            if(child.name === 'Cube'){
+                child.position.set(0, -1, 0);
+                child.rotation.y = Math.PI / 4;
             }
-        })
+
+            this.roomChildren[child.name.toLowerCase()] = child;
+        });
 
         const width = 0.8;
         const height = 0.3;
@@ -85,6 +83,8 @@ export default class Room{
         rectLight.rotation.x = -Math.PI / 2;
         rectLight.rotation.z = -Math.PI / 4;
         this.actualRoom.add(rectLight);
+
+        this.roomChildren['rectLight'] = rectLight;
 
         this.actualRoom.scale.set(0.1, 0.1, 0.1);
         this.scene.add(this.actualRoom);
