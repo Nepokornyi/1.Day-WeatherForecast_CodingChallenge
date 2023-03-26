@@ -1,0 +1,29 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    background-color: #9679ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#touch-area{
+    background-color: #fff;
+    height:400px;
+    width: 400px;
+    border-radius: 15px;
+}
+
+#output{
+    background-color: #fff;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 15px;
+}
