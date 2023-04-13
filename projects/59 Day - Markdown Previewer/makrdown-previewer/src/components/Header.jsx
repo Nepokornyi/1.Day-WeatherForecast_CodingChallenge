@@ -15,17 +15,20 @@ const useStyle = createUseStyles({
         '& .fa-arrows-alt': {
             marginLeft: 'auto',
             transform: 'rotate(45deg)',
+            cursor: 'pointer'
         }
     }
 })
 
-function Header({ title }) {
+function Header({ title, onExpand, resetHeight }) {
 
     const style = useStyle();
 
     const handleExpand = () => {
-        console.log('expand')
+        onExpand();
+        resetHeight();
     }
+
 
     return (
         <div className={style.header}>

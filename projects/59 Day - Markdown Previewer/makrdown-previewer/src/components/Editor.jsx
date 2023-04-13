@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React from 'react'
 import { createUseStyles } from 'react-jss'
 
 
@@ -9,11 +9,13 @@ const useStyle = createUseStyles({
         margin: 0,
         padding: 0,
         border: 'none',
-        display: 'block'
+        display: 'block',
+        resize: 'vertical'
     }
 })
 
-function Editor({ handleChange }) {
+function Editor({ handleChange, initialValue }) {
+
 
     const style = useStyle();
 
@@ -22,8 +24,8 @@ function Editor({ handleChange }) {
             <textarea 
                 className={style.editor}
                 id='editor'
+                value={initialValue}
                 onChange={handleChange}>
-
             </textarea>
 
         </>
