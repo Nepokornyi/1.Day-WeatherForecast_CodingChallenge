@@ -1,0 +1,87 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #fff;
+}
+
+button {
+    padding: 10px;
+    min-width: 100px;
+    background-color: darkslategrey;
+    border: none;
+    color: wheat;
+    margin: 5px;
+    transition: 350ms ease-in;
+}
+
+button:hover {
+    background-color: wheat;
+    color: darkslategrey;
+    cursor: pointer;
+}
+
+.toast-container{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.toast {
+    position: relative;
+    margin: 50px;
+    min-width: 250px;
+    height: 80px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    transition: 350ms ease;
+}
+
+i {
+    margin: 0 10px;
+    text-align: center;
+    font-size: 34px;
+}
+
+.progress{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 6px;
+    width: 100%;
+}
+
+.progress::before{
+    content: "";
+    display: block;
+    width: 0;
+    height: 100%;
+    animation: inProgress 3s linear forwards;
+}
+
+.progress.success::before{
+    background-color: green;
+}
+.progress.error::before{
+    background-color: red;
+}
+.progress.invalid::before{
+    background-color: orange;
+}
+
+@keyframes inProgress {
+    to {
+        width: 100%
+    }
+}
+
