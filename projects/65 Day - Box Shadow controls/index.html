@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- fa -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- styles -->
+    <link rel="stylesheet" href="style.css">
+
+    <title> Day 65 - Box Shadow Controls</title>
+</head>
+<body>
+
+    <div class="box-container">
+        <div id="box"></div>
+    </div>
+    <div class="sidebar">
+        <label for="x-position">X</label>
+        <input type="number" name="x-position" id="x-position" value="3">
+
+        <label for="y-position">Y</label>
+        <input type="number" name="y-position" id="y-position" value="3">
+
+        <label for="blur">Blur</label>
+        <input type="number" name="blur" id="blur" value="5">
+
+        <label for="spread">Spread</label>
+        <input type="number" name="spread" id="spread" value="6">
+
+        <label for="shadow-color">Shadow</label>
+        <input type="color" name="shadow-color" id="shadow-color" value="#000000">
+
+        <span class="divider"></span>
+
+        <label for="box-color">Box</label>
+        <input type="color" name="box-color" id="box-color" value="#FFD700">
+
+        <label for="background-color">Background</label>
+        <input type="color" name="background-color" id="background-color" value="#FFFFFF">
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

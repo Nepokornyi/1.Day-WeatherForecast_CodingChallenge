@@ -1,0 +1,78 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: var(--background-color, #fff);
+}
+
+.box-container {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.sidebar{
+    min-width: 130px;
+    width: 20%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #222;
+    color: white;
+}
+
+.sidebar label{
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.divider::before{
+    content: "";
+    display: block;
+    border-bottom: 1px solid #999;
+    width: calc(100% + 40px);
+    position: relative;
+    left: -20px;
+    bottom: -10px;
+}
+
+#box{
+    width: 100px;
+    height: 100px;
+    background-color: var(--box-color, #ffd700);
+    box-shadow: 
+        calc(var(--x-position, 3) * 1px)
+        calc(var(--y-position, 3) * 1px)
+        calc(var(--blur, 5) * 1px)
+        calc(var(--spread, 6) * 1px)
+        var(--shadow-color, #000)
+}
+input:not([type="color"]) {
+    padding: 7.5px 4px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    outline: none;
+}
+
+input:not([type="color"]):focus {
+    border-color: #0af;
+}
+
+input[type="color"] {
+    width: 100%;
+    border-radius: 5px;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+}
